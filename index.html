@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gloeiende motor</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      overflow: hidden;
+    }
+
+    #image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* default: fit in window */
+      cursor: pointer;
+      display: block;
+    }
+
+    .fullscreen #image {
+      object-fit: cover; /* stretch when in fullscreen */
+    }
+  </style>
+</head>
+<body>
+  <a href="https://nl.pornhub.com/gay/video/search?search=femboy" target="_blank">
+    <img id="image" src="https://png.pngtree.com/thumb_back/fw800/background/20241013/pngtree-an-engine-with-glowing-flames-in-each-cylinder-showcasing-the-power-image_16380274.jpg" alt="Responsive Image" />
+  </a>
+
+  <script>
+    function checkFullscreen() {
+      if (
+        document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullscreenElement
+      ) {
+        document.body.classList.add('fullscreen');
+      } else {
+        document.body.classList.remove('fullscreen');
+      }
+    }
+
+    document.addEventListener('fullscreenchange', checkFullscreen);
+    document.addEventListener('webkitfullscreenchange', checkFullscreen);
+    document.addEventListener('mozfullscreenchange', checkFullscreen);
+    document.addEventListener('MSFullscreenChange', checkFullscreen);
+
+    const titles = [
+  "gloeiende motor",
+];
+
+function cycleTitle() {
+  let i = 0;
+  setInterval(() => {
+    document.title = titles[i];
+    i = (i + 1) % titles.length;
+  }, 1000);
+}
+
+cycleTitle();
+
+  </script>
+</body>
+</html>
